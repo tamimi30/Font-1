@@ -1,1 +1,7 @@
-
+fonttools
+pillow
+arabic_reshaper
+python-bidi
+rich
+colorama
+uharfbuzz
