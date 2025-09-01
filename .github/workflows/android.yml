@@ -20,7 +20,7 @@ jobs:
         java-version: '17'
 
     - name: Build APK
-  run: cd path/to/project && ./gradlew assembleDebug
+      run: cd path/to/project && ./gradlew assembleDebug
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
