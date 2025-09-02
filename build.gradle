@@ -21,3 +21,10 @@ allprojects {
         maven { url "https://chaquo.com/maven" }
     }
 }
+
+subprojects {
+    tasks.withType(JavaCompile).configureEach {
+        sourceCompatibility = '17'
+        targetCompatibility = '17'
+    }
+}
