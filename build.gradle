@@ -3,9 +3,13 @@ buildscript {
     repositories {
         google()
         mavenCentral()
+        // أضف مستودع Chaquopy
+        maven { url "https://chaquo.com/maven" }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:8.1.2'
+        // أضف إضافة Chaquopy Gradle plugin
+        classpath "com.chaquo.python:gradle:12.1.0"
     }
 }
 
@@ -13,5 +17,7 @@ allprojects {
     repositories {
         google()
         mavenCentral()
+        // أضف مستودع Chaquopy هنا أيضاً في حال احتاجه أحد الموديولات
+        maven { url "https://chaquo.com/maven" }
     }
 }
