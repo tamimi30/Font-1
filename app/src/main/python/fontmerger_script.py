@@ -1,17 +1,14 @@
-import fonttools
-from fontTools.ttLib import TTFont
-from rich import print
+import sys
 
-def main_ui(font1_path, font2_path):
-    try:
-        font1 = TTFont(font1_path)
-        font2 = TTFont(font2_path)
-        # مثال: دمج الـ glyphs من الخط الثاني للخط الأول
-        for table in font2.keys():
-            if table not in font1.keys():
-                font1[table] = font2[table]
-        out_path = "merged_font.ttf"
-        font1.save(out_path)
-        return f"تم الدمج! تم حفظ الخط في: {out_path}"
-    except Exception as e:
-        return f"حدث خطأ أثناء الدمج: {str(e)}"
+# Your existing imports here
+
+def main_ui(input_path, output_path='merged_font.ttf'):
+    # Your existing code
+    # Modify the saving logic to use output_path instead of hardcoded name
+    with open(output_path, 'wb') as f:
+        f.write(merged_font_data)
+
+if __name__ == '__main__':
+    input_path = sys.argv[1]
+    output_path = sys.argv[2] if len(sys.argv) > 2 else 'merged_font.ttf'
+    main_ui(input_path, output_path)
