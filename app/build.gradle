@@ -1,6 +1,6 @@
 plugins {
     id 'com.android.application'
-    id 'com.chaquo.python' version '16.1.0' // عدّل رقم النسخة حسب آخر إصدار
+    id 'com.chaquo.python'  // عدّل رقم النسخة حسب آخر إصدار
 }
 
 android {
