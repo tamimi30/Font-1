@@ -1,8 +1,8 @@
 // build.gradle (Project-level)
 buildscript {
     repositories {
-        google()
         mavenCentral()
+        google()
         // أضف مستودع Chaquopy
         maven { url "https://chaquo.com/maven" }
     }
@@ -15,8 +15,8 @@ buildscript {
 
 allprojects {
     repositories {
-        google()
         mavenCentral()
+        google()
         // أضف مستودع Chaquopy هنا أيضاً في حال احتاجه أحد الموديولات
         maven { url "https://chaquo.com/maven" }
     }
