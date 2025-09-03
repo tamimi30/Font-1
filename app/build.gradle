@@ -4,7 +4,9 @@ plugins {
 }
 
 android {
+    namespace 'com.fontmerger'
     compileSdk 34
+
     defaultConfig {
         applicationId "com.fontmerger"
         minSdk 21
@@ -43,3 +45,6 @@ dependencies {
     implementation 'com.google.android.material:material:1.11.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
 }
+
+// أضفت namespace وهذا مطلوب في الإصدارات الحديثة
+// تم التحقق من التوافق مع Gradle وChaquopy
