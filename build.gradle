@@ -1,11 +1,11 @@
-// ملف build.gradle في الجذر غالباً لا يحتاج أكثر من ضبط إعدادات الجافا والـ classpath إذا كان المشروع صغيراً
+// ملف build.gradle في الجذر لمشروع أندرويد مع دعم Chaquopy
 buildscript {
     repositories {
         google()
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.6-all'
+        classpath 'com.android.tools.build:gradle:7.6.0'
         classpath 'com.chaquo.python:gradle:16.1.0'
     }
 }
@@ -14,22 +14,13 @@ allprojects {
     repositories {
         google()
         mavenCentral()
+        // أضف jcenter() فقط إذا احتجت مكتبات منه
+        // jcenter()
     }
 }
 
-// كود تجاهل الاعتماد المفقود
-configurations.all {
-    resolutionStrategy.eachDependency { details ->
-        if (details.requested.group == 'org.apache' &&
-            details.requested.name == 'apache' &&
-            details.requested.version == '19') {
-            details.useTarget group: 'org.apache.commons', name: 'commons-lang3', version: '3.12.0'
-        }
-    }
-}
+// حذف كود تجاهل الاعتماد المفقود لأنه غير ضروري وستسبب مشاكل في البناء غالباً
 
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
-
-// تحديث التوافق لإصدار Android Gradle Plugin وChaquopy
