@@ -32,6 +32,6 @@ android {
 }
 
 dependencies {
-    implementation 'com.android.tools.lint:lint-gradle:31.2.2'
+    
     // أضف أي مكتبات أخرى بنفس الشكل بهذا الخط
 }
