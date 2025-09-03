@@ -37,5 +37,6 @@ dependencies {
     // أضف هنا أي مكتبات جافا/أندرويد تحتاجها مثل:
     // implementation 'androidx.appcompat:appcompat:1.6.1'
     // implementation 'com.google.android.material:material:1.9.0'
+    // implementation 'org.apache.commons:commons-compress:1.21'
     // وإذا عندك مكتبة جافا معينة واجهت معها مشكلة، أرسل اسمها لأساعدك في إضافتها
 }
