@@ -1,14 +1,15 @@
 plugins {
     id 'com.android.application'
-    id 'com.chaquo.python'  // عدّل رقم النسخة حسب آخر إصدار
+    id 'com.chaquo.python'  // تأكد أن رقم النسخة في ملف الجذر متوافق
 }
 
 android {
-    compileSdkVersion 33
+    compileSdk 33
+
     defaultConfig {
         applicationId "com.fontmerger"
-        minSdkVersion 24
-        targetSdkVersion 33
+        minSdk 24
+        targetSdk 33
         versionCode 1
         versionName "1.0"
         python {
@@ -23,6 +24,7 @@ android {
             }
         }
     }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -32,6 +34,8 @@ android {
 }
 
 dependencies {
-    
-    // أضف أي مكتبات أخرى بنفس الشكل بهذا الخط
+    // أضف هنا أي مكتبات جافا/أندرويد تحتاجها مثل:
+    // implementation 'androidx.appcompat:appcompat:1.6.1'
+    // implementation 'com.google.android.material:material:1.9.0'
+    // وإذا عندك مكتبة جافا معينة واجهت معها مشكلة، أرسل اسمها لأساعدك في إضافتها
 }
