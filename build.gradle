@@ -1,1 +1,24 @@
-// Updated build.gradle content goes here...
+// ملف build.gradle في الجذر غالباً لا يحتاج أكثر من ضبط إعدادات الجافا والـ classpath إذا كان المشروع صغيراً
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.2.2'
+        classpath 'com.chaquo.python:gradle:14.0.2'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+// تحديث التوافق لإصدار Android Gradle Plugin وChaquopy
