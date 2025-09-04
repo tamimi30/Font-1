@@ -5,7 +5,7 @@
 # This script is responsible for launching the Gradle Wrapper. It will download the Gradle distribution if it is not already present.
 
 # Set the default Gradle version
-GRADLE_VERSION=7.4.2-all
+GRADLE_VERSION=7.6-all
 
 # Define the location of the Gradle wrapper jar
 WRAPPER_JAR="gradle/wrapper/gradle-wrapper.jar"
